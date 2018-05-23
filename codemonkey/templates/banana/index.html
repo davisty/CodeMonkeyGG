@@ -9,5 +9,22 @@
   <body>
     <h1>Meet the monkey behind it all.</h1>
     <img src="{% static "images/codemonkey.png" %}" alt = "oh crap nothing here">
+    <div class="djangtwo">
+      {% if access_records %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+          </thead>
+          {% for acc in access_records %}
+          <tr>
+            <td>{{ acc.name }}</td>
+            <td>{{ acc.date }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p>nothin found</p>
+      {% endif %}
+    </div>
   </body>
 </html>

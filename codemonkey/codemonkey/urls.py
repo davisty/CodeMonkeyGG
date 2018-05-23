@@ -17,9 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 from banana import views
+from user_app import views
 
 urlpatterns = [
-    url(r'^$',views.index,name='index'),
+    url(r'^',include('banana.urls')),
+    #url(r'^$',views.index,name='index'),
     url(r'^banana/',include('banana.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^users/',include('user_app.urls')),
 ]
