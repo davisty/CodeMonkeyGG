@@ -18,7 +18,10 @@ from django.contrib import admin
 from django.conf.urls import include
 from banana import views
 from user_app import views
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8a4f83386a4af3f8031d964a91f6a5b7b443f896
 urlpatterns = [
     url(r'^',include('banana.urls')),
     #url(r'^$',views.index,name='index'),
