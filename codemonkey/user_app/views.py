@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request,'user_app/index.html')
+    return render(request,'banana/homepage.html')
 
 def users(request):
     user_list = User.objects.order_by('first_name')
